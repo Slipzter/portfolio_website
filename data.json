@@ -1,0 +1,48 @@
+{
+    "experience": [
+        {
+            "workplace": "Stavanger Symphony Orchestra",
+            "title": "Orchestral Musician, Full-Time",
+            "years": "2017 - 2022",
+            "location": "Stavanger, Norway"
+        },
+        {
+            "workplace": "My Website",
+            "title": "Personal Trainer",
+            "years": "2021 - present",
+            "location": "Online"
+        },
+        {
+            "workplace": "Stavanger Musicians' Bar",
+            "title": "Manager / Bartender",
+            "years": "2018 - 2022",
+            "location": "Stavanger, Norway"
+        }
+    ],
+    "educations": [
+        {
+            "school": "Sibelius Academy",
+            "title": "Bachelor of Music",
+            "years": "2012 - 2015",
+            "location": "Helsinki, Finland"
+        },
+        {
+            "school": "Guildhall School of Music",
+            "title": "Master of Music",
+            "years": "2015 - 2017",
+            "location": "London, UK"
+        },
+        {
+            "school": "AFPT",
+            "title": "Certified Personal Trainer",
+            "years": "2020 - 2021",
+            "location": "Stavanger, Norway"
+        },
+        {
+            "school": "Chas Academy",
+            "title": "Fullstack Web Developer .NET",
+            "years": "2022 - 2024",
+            "location": "Stockholm, Sweden"
+        }
+    ]
+}

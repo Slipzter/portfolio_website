@@ -1,0 +1,462 @@
+/* ---------------------------- ANIMATIONS -----------------------------*/
+
+@keyframes bounce {
+    0% {
+        transform: translate(0px, -1px);
+    }
+
+    50% {
+        transform: translate(0px, -11px);
+    }
+
+    70% {
+        transform: translate(0px, -7px);
+    }
+
+    100% {
+        transform: translate(0px, -1px);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, -1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(1px, -5px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(1px, -7px) rotate(-3deg);
+    }
+
+    30% {
+        transform: translate(1px, -9px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -11px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(1px, -13px) rotate(3deg);
+    }
+
+    60% {
+        transform: translate(1px, -11px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(1px, -9px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(1px, -7px) rotate(-3deg);
+    }
+
+    90% {
+        transform: translate(1px, -5px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -1px) rotate(-1deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* ---------------------------- GLOBALS -----------------------------*/
+
+:root {
+    --blue: #144270;
+    --teal: #5fe6e6;
+    --orange: #e6a836;
+    --dark-orange: #e3811980;
+    --gray: #f9f9f9;
+    --text-shadow:
+        0.04em 0 var(--dark-orange),
+        0 0.04em var(--dark-orange),
+        -0.04em 0 var(--dark-orange),
+        0 -0.04em var(--dark-orange);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    height: 300vh;
+    width: 100vw;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+    margin-left: 250px;
+}
+
+
+.wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 250px;
+    background-image: url("images/20201005_143913.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 75%;
+}
+
+a:visited {
+    color: whitesmoke;
+}
+
+
+/* ---------------------------- PRELOADER -----------------------------*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    text-align: center;
+    background-color: var(--blue);
+}
+
+.preloader-icon {
+    position: relative;
+    top: 45%;
+    width: 100px;
+    border-radius: 50%;
+    animation: shake 1s infinite;
+}
+
+.fade-out-fast {
+    animation: fadeOut 0.5s;
+}
+
+.fade-out-slow {
+    animation: fadeOut 1s;
+}
+
+
+/* ---------------------------- SIDEBAR -----------------------------*/
+
+.sidebar {
+    color: whitesmoke;
+    height: 100vh;
+    width: 250px;
+    min-width: 200px;
+    background-color: var(--blue);
+    position: fixed;
+    margin-top: 0%;
+    left: 0%;
+    box-shadow: 2px 0px 40px 15px #1442704a;
+}
+
+.logo {
+    margin: 1em;
+    width: 130px;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.sidebar-nav a {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-decoration: none;
+    width: 8rem;
+    margin: 10px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: solid 2px rgba(245, 245, 245, 0.043);
+    color: whitesmoke;
+}
+
+.sidebar-nav a:hover {
+    transition: ease 0.5s;
+    color: var(--orange);
+}
+
+#last-button {
+    border-bottom: none;
+}
+
+.sidebar-links {
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+}
+
+.sidebar-links a {
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 0 10px 30px 20px;
+}
+
+.sidebar-links a:hover {
+    transition: ease 0.5s;
+    color: var(--orange);
+}
+
+.sidebar-nav a.active {
+    color: var(--orange);
+}
+
+
+/* ---------------------------- HOMEPAGE -----------------------------*/
+
+#home {
+    height: 100vh;
+    backdrop-filter: blur(2px);
+}
+
+
+.main-image {
+    font-family: 'Mulish', sans-serif;
+    color: whitesmoke;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 33.5%;
+    top: 25%;
+    height: 100%;
+}
+
+.main-image img {
+    width: 150px;
+    border-radius: 50%;
+    border: solid 6px #1442703e;
+}
+
+.main-image h2 {
+    margin: 0.5rem 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    backdrop-filter: blur(1px);
+    text-shadow: var(--text-shadow);
+}
+
+.text-slider {
+    font-size: 1.5rem;
+    text-shadow: var(--text-shadow);
+}
+
+.text-slider-items {
+    display: none;
+}
+
+.main-image i {
+    font-size: 30px;
+}
+
+.last-name {
+    /* color: #df1197; */
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30%;
+}
+
+.scroll-down i {
+    font-size: 2.5em;
+    color: whitesmoke;
+    animation: bounce 1s infinite linear;
+}
+
+.scroll-down i:hover {
+    transition: ease 0.5s;
+    color: var(--orange);
+}
+
+.go-to-top {
+    position: fixed;
+    background-color: var(--orange);
+    border-radius: 2px;
+    right: 3%;
+    bottom: 5%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.go-to-top i {
+    font-size: 1.5em;
+    color: #144270;
+}
+
+/* ---------------- ABOUT, SKILLS, PORTFOLIO, CONTACT -------------*/
+
+.pre-title {
+    color: var(--orange);
+    padding-top: 10%;
+}
+
+/* ---------------------------- ABOUT -----------------------------*/
+
+
+#about {
+    height: 80vh;
+    color: black;
+    padding: 0 20vw 0 20vw;
+}
+
+.about-inner {
+    margin-top: 10%;
+    display: flex;
+}
+
+.left {
+    margin-right: 10%;
+    position: relative;
+
+}
+
+.left img {
+    width: 10em;
+    border-radius: 10px;
+
+}
+
+.frame::before {
+    border-radius: 10px;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    content: "";
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid 8px var(--orange);
+    z-index: -1;
+}
+
+.right {
+    width: 20vw;
+}
+
+.download-button {
+    width: 200px;
+    height: 100px;
+    background-color: var(--orange);
+}
+
+/* ---------------------------- SKILLS -----------------------------*/
+
+#skills {
+    background-color: var(--gray);
+    height: 80vh;
+    color: black;
+    padding: 0 20vw 0 20vw;
+
+}
+
+.skills-icons {
+    color: var(--blue);
+}
+
+.skills-icons ul {
+    list-style: none;
+}
+
+.skills-icons i {
+    font-size: 80px;
+}
+
+
+/* ---------------------------- PORTFOLIO -----------------------------*/
+
+#education {
+    height: 80vh;
+    color: black;
+    padding: 0 20vw 0 20vw;
+}
+
+
+/* ---------------------------- CONTACT -----------------------------*/
+
+#contact {
+    background-color: var(--gray);
+    height: 80vh;
+    color: black;
+    padding: 0 20vw 0 20vw;
+    margin-bottom: 0;
+}
+
+/* ---------------------------- FOOTER -----------------------------*/
+
+footer {
+    height: 20vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer h2 {
+    font-size: 1em;
+    margin-top: 0;
+    color: whitesmoke;
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    transition: ease 0.5s;
+    color: var(--orange);
+}
+
+.footer-nav a.active {
+    color: var(--orange);
+}
