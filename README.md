@@ -1,7 +1,7 @@
 # Welcome to my website!
 
 ##### Built with HTML, CSS and vanilla JavaScript. 
-#### Plans for the future is to build two additional versions with React.js and Blazor. 
+#### Plans for the future is to build two additional versions of this website with React.js and Blazor. 
 
 ### Stay tuned!
 
