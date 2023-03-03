@@ -44,16 +44,35 @@ window.addEventListener('load', () => {
 });
 
 setTimeout(() => {
-    typeWriter();
+    typeWriter1();
 }, 2200);
 
-function typeWriter() {
+typeWriter2();
+
+function typeWriter1() {
     if ($(".text-slider").length == 1) {
 
         var typed_strings =
             $(".text-slider-items").text();
 
         var typed = new Typed(".text-slider", {
+            strings: typed_strings.split(", "),
+            typeSpeed: 40,
+            loop: true,
+            backDelay: 1500,
+            backSpeed: 40,
+        });
+    }
+
+}
+
+function typeWriter2() {
+    if ($(".text-slider2").length == 1) {
+
+        var typed_strings =
+            $(".text-slider2-items").text();
+
+        var typed = new Typed(".text-slider2", {
             strings: typed_strings.split(", "),
             typeSpeed: 40,
             loop: true,

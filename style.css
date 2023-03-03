@@ -108,7 +108,7 @@ body {
     margin: 0;
     height: 300vh;
     width: 100vw;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
 
 .wrapper {
@@ -383,6 +383,22 @@ body {
     width: 20vw;
 }
 
+.about-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.about-list i {
+    margin-right: 10px;
+}
+
+.about-list p {
+    margin: 2% 0;
+    font-size: 0.9em;
+}
+
 .download-button {
     color: var(--orange);
     padding: 10px;
@@ -390,6 +406,7 @@ body {
     border: 2px solid var(--orange);
     text-decoration: none;
     border-radius: 2px;
+    font-size: 1.1em;
     transition: ease 0.5s;
 }
 
@@ -408,6 +425,20 @@ body {
     height: 90vh;
     color: black;
     padding: 0 20vw 0 20vw;
+}
+
+.right h4 {
+    margin-top: 0;
+    height: 20px;
+    width: 100%;
+}
+
+.text-slider2 {
+    text-shadow: var(--text-shadow);
+}
+
+.text-slider2-items {
+    display: none;
 }
 
 .skills-icons {
@@ -430,8 +461,8 @@ body {
 .programming-icons:hover,
 .music-icons:hover,
 .languages-icons:hover {
-    transition: ease 0.5s;
-    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.264);
+    transition: ease 0.3s;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.308);
 }
 
 .programming-start,
