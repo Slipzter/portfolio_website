@@ -9,6 +9,26 @@ const aboutImage = document.querySelector('.about-image');
 
 const frame = document.querySelector('.frame');
 
+const home = document.querySelector('#home');
+
+// Tester
+/* console.log("X");
+ */
+
+
+// REMOVE AFTER DEVELOPMENT
+document.querySelector(".preloader").style.display = "none";
+//
+
+window.onscroll = function () {
+
+    if (scrollY > home.offsetHeight) {
+        goToTop.classList.remove("hidden");
+    } else {
+        goToTop.classList.add("hidden");
+    }
+};
+
 window.addEventListener('load', () => {
     const preloadIcon = document.querySelector(".preloader-icon");
     const preload = document.querySelector(".preloader");
@@ -43,7 +63,6 @@ function typeWriter() {
     }
 
 }
-
 
 window.addEventListener("scroll", navHighlighter);
 
